@@ -3,18 +3,45 @@ body {
     width: 100%;
     font-family: 'Roboto Slab', serif;
     font-size: large;
-    text-align: center;
 }
 
 .bg {
-    position: fixed;
-    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.4), rgba(136, 136, 206, 0.5) ), url(background2.jpg);
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.3), rgba(136, 136, 206, 0.4) ), url(background2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
     width: 100%;
     z-index: -1;
+}
+
+.header {
+    position: sticky;
+    background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.7), rgba(136, 136, 206, 0.5) );
+    width: 100%;
+    padding: 0.6rem;
+}
+
+.logo {
+    position: relative;
+    width: 70px;
+    margin: 0 100px;
+}
+
+span {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 25px;
+    color: #ffffffde;
+}
+
+.register {
+    margin-right: 15rem;
+}
+
+.login {
+    margin-right: 5rem;
 }
 
 p {
@@ -25,13 +52,14 @@ p {
 
 .container {
     padding-top: 12rem;
+    padding-bottom: 12rem;
     margin: 0 auto;
-    height: 100vh;
     max-width: 1000px;
     width: 100%;
 }
 
 form {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,8 +98,44 @@ input::placeholder {
     border: none;
     border-radius: 20px;
     color: white;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-image: linear-gradient( 115deg, rgba(147, 147, 245, 0.8), rgba(179, 179, 236, 0.7) );
+}
+
+footer {
+    background-image: linear-gradient( 115deg, rgba(136, 136, 206, 0.5), rgba(58, 58, 158, 0.7) );
+    height: 10rem;
+    width: 100%;
 }
 
 * {
     box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        position: relative;
+        width: 70px;
+        margin: 0 25px;
+    }
+    
+    span {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        padding: 25px;
+        color: #ffffffde;
+    }
+    
+    .register {
+        margin-right: 5rem;
+    }
+    
+    .login {
+        margin-right: 0.5rem;
+    }
+    
 }
